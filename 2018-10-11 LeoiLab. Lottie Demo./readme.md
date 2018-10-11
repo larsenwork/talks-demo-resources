@@ -1,4 +1,10 @@
-# Animating vector graphics on the web
+<p align="center">
+<img width="200px" src="https://github.com/larsenwork/talks-demo-resources/blob/master/2018-10-11%20LeoiLab.%20Lottie%20Demo./assets/Woman%20Scratching.gif?raw=true" />
+</p>
+
+<h1 align="center">
+  Animating vector graphics on the web
+</h1>
 
 ## In this repository
 
