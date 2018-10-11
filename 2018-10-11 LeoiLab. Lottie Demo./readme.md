@@ -10,9 +10,9 @@
 
 ## Vector graphics
 
-Vector is code.
-File-size matters.
-Number of coordinates matters.
+Vector is code.<br>
+File-size matters.<br>
+Number of coordinates matters.<br>
 Path direction matters.
 
 ## Animate directly using a framework
