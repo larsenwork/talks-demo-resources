@@ -2,6 +2,7 @@
 
 ## In this repository
 
+- Assets (video and gif)
 - Basic svg examples
 - data.json (bodymovin export of "Woman Scratching.aep")
 - readme.md (this file)
