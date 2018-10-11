@@ -44,7 +44,7 @@ Hook it up to e.g.
   - AEUX add layers to comp.
   - Paste path data from e.g. "Right Hair 2" in to "Right Hair" at keyframes to morph
 
-<!-- Illustrator workflow
+#### Illustrator workflow
   - Illustrator (prep)
     - Release to layers (sequence)
     - Save as .ai file
@@ -52,7 +52,6 @@ Hook it up to e.g.
     - Import .ai as "merged layers"
     - "Create" -> "Convert to shapes from vector layer"
     - Copy-paste path data
--->
 
 ### Codepen demo
 
