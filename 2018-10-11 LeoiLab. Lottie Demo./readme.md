@@ -50,15 +50,17 @@ Hook it up to e.g.
   - Create a composition with desired settings
   - AEUX add layers to comp.
   - Paste path data from e.g. "Right Hair 2" in to "Right Hair" at keyframes to morph
+  - Project settings: Apple RGB, 32 Bit
 
 #### Illustrator workflow
-  - Illustrator (prep)
-    - Release to layers (sequence)
-    - Save as .ai file
-  - After Effects
-    - Import .ai as "merged layers"
-    - "Create" -> "Convert to shapes from vector layer"
-    - Copy-paste path data
+
+- Illustrator (prep)
+  - Release to layers (sequence)
+  - Save as .ai file
+- After Effects
+  - Import .ai as "merged layers"
+  - "Create" -> "Convert to shapes from vector layer"
+  - Copy-paste path data
 
 ### Codepen demo
 
