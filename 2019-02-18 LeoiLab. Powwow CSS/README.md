@@ -1,6 +1,18 @@
 # powwow-css
 
-> My polished Nuxt.js project
+## Misc
+
+- Viewport units: https://codepen.io/larsenwork/pen/5f77de58716732cd5d2b46d806177561
+- List of "future" CSS: https://cssdb.org
+- Autoprefix + polyfil CSS: https://preset-env.cssdb.org
+- CSS Custom Properties: https://codepen.io/larsenwork/pen/XOGGbp
+
+## CSS Grid
+
+- Examples, tutorials and practice tasks: https://labs.jensimmons.com/
+- Complete Guide: https://css-tricks.com/snippets/css/complete-guide-grid/
+- Visual overview: http://grid.malven.co/
+- Example of real world use (use FireFox inspector): http://helloskin.io/
 
 ## Build Setup
 
