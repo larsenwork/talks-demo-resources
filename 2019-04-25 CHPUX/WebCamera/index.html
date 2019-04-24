@@ -1,63 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CPHUX</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
-  <link rel="stylesheet" href="style.css">
-  <title>CPHUX</title>
-</head>
+  <body>
+    <div id="app">
+      <button @click="updateState">{{ photoCount }}</button>
+      <video ref="camera" autoplay playsinline></video>
+    </div>
 
-<body>
-  <div id="app">
-    <button @click="updateState">{{ photoCount }}</button>
-    <video ref="camera" autoplay playsinline></video>
-  </div>
+    <!-- Vue, Firebare, Firestore, VueFire -->
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-firestore.js"></script>
+    <script src="https://unpkg.com/vue-firestore@0.3.21/dist/vue-firestore.js"></script>
 
-  <!-- Vue, Firebare, Firestore, VueFire -->
-  <script src="https://unpkg.com/vue"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-firestore.js"></script>
-  <script src="https://unpkg.com/vue-firestore@0.3.21/dist/vue-firestore.js"></script>
-
-  <script>
-    // Setting up Firestore
-    firebase.initializeApp({
-      authDomain: "larsentalks.firebaseapp.com",
-      projectId: "larsentalks",
-    })
-
-    // Vue app
-    var app = new Vue({
-      el: '#app',
-      firestore: {
-        cphuxState: firebase.firestore().collection("cphux").doc("state")
-      },
-      data: {
-        photoCount: 0,
-      },
-      methods: {
-        updateState() {
-          this.photoCount++
-          this.$firestore.cphuxState.update({ photoCount: this.photoCount })
-        },
-      },
-      mounted() {
-        // Reset Firestore
-        this.$firestore.cphuxState.update({ photoCount: 0 })
-
-        // Camera stuff
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-          const videoSettings = { video: { facingMode: "environment" }, audio: false }
-          navigator.mediaDevices.getUserMedia(videoSettings).then(stream => {
-            this.$refs.camera.srcObject = stream
-          })
-        }
-      },
-    })
-  </script>
-</body>
-
+    <script src="app.js"></script>
+  </body>
 </html>
