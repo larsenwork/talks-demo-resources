@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  color: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+:root {
+  --size: 10px;
+  --barHeight: calc(var(--size) * 8);
+  --border: 2px;
+  --color-bg: hsla(0, 0%, 0%, 0.8);
+  --color-button: white;
+}
+
+html, body, #app {
+  background-color: var(--color-bg);
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+video {
+  width: 100%;
+  height: calc(100% - var(--barHeight));
+}
+
+button {
+  position: absolute;
+  bottom: var(--size);
+  left: 50%;
+  height: calc(var(--barHeight) - 2 * var(--size));
+  width: calc(var(--barHeight) - 2 * var(--size));
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: var(--color-button);
+}
+
+button:active {
+  --color-button: hsla(0, 0%, 100%, 0.8);
+}
+
+button::before {
+  --offset: calc(var(--border) * -2);
+  content: '';
+  position: absolute;
+  top: var(--offset);
+  right: var(--offset);
+  bottom: var(--offset);
+  left: var(--offset);
+  border-radius: 50%;
+  border: var(--border) solid var(--color-button);
+}

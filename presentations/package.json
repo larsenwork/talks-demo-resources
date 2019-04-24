@@ -1,0 +1,12 @@
+{
+  "name": "presentations",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "mdx-deck deck.mdx"
+  },
+  "author": "larsenwork",
+  "license": "MIT",
+  "devDependencies": {
+    "mdx-deck": "^2.3.2"
+  }
+}
