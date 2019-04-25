@@ -3,15 +3,17 @@ import React from 'react'
 export default function BlurryImage({ src }) {
   return (
     <>
-      <div
+      <img
         style={{
-          backgroundColor: '#333',
           height: '100vh',
           width: '100vw',
+          objectFit: 'cover',
           position: 'fixed',
           top: 0,
           left: 0,
+          transform: 'scale(1.15)',
         }}
+        src={src}
       />
       <img
         style={{
@@ -21,7 +23,8 @@ export default function BlurryImage({ src }) {
           position: 'fixed',
           top: 0,
           left: 0,
-          filter: 'blur(40px)',
+          filter: 'blur(3vh)',
+          transform: 'scale(1.15)',
         }}
         src={src}
       />

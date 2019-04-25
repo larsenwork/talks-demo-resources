@@ -6,26 +6,41 @@ const customTheme = {
   css: {
     fontWeight: 300,
     lineHeight: 1.4,
+    letterSpacing: '1px',
   },
   font:
     'system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue',
   colors: {
-    text: '#252525',
+    text: '#555',
     background: 'white',
   },
   heading: {
+    maxWidth: '80vw',
+  },
+  h1: {
     margin: '0.3em 0',
     lineHeight: 1,
+    letterSpacing: 0,
+    color: '#252525',
+  },
+  h2: {
+    margin: '0.3em 0',
+    lineHeight: 1.2,
+    letterSpacing: 0,
+    color: '#252525',
+    fontWeight: 300,
+  },
+  h3: {
+    fontWeight: 300,
+    fontSize: '1em',
+    margin: '1em 0',
   },
   ul: {
     paddingLeft: 0,
     listStyle: 'none',
   },
-  h1: {
-    fontWeight: 900,
-  },
-  h2: {
-    fontWeight: 300,
+  li: {
+    display: 'flex',
   },
   a: {
     textDecoration: 'none',

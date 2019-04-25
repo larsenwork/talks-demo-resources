@@ -7,17 +7,17 @@ firebase.initializeApp({
 // Vue app
 const app = new Vue({
   el: '#app',
+  data: {
+    photoCount: 0,
+  },
   firestore: {
     cphuxState: firebase
       .firestore()
       .collection('cphux')
       .doc('state'),
   },
-  data: {
-    photoCount: 0,
-  },
   methods: {
-    updateState() {
+    takePic() {
       this.photoCount++
       this.$firestore.cphuxState.update({ photoCount: this.photoCount })
     },

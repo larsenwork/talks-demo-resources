@@ -7,13 +7,15 @@
     />
     <meta name="mobile-web-app-capable" content="yes" />
     <link rel="stylesheet" href="style.css" />
+    <link href="icon.png" rel="apple-touch-icon" />
     <title>CPHUX</title>
   </head>
 
   <body>
     <div id="app">
-      <button @click="updateState">{{ photoCount }}</button>
-      <video ref="camera" autoplay playsinline></video>
+      <button @click="takePic">{{ photoCount }}</button>
+      <video v-if="photoCount == 0" ref="camera" autoplay playsinline></video>
+      <img v-else src="disease.jpg" />
     </div>
 
     <!-- Vue, Firebare, Firestore, VueFire -->
@@ -25,3 +27,9 @@
     <script src="app.js"></script>
   </body>
 </html>
+
+<!--
+https://console.firebase.google.com/project/larsentalks/database/firestore/data~2Fcphux~2Fstate
+serve
+surge . funky-test.surge.sh
+ -->

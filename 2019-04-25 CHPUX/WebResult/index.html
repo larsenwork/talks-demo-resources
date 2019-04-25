@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <title>CPHUX</title>
+    <style>
+      #app .primary {
+        background-color: hotpink !important;
+        border-color: hotpink !important;
+      }
+      #app .primary--text {
+        color: hotpink !important;
+      }
+      .v-card,
+      .v-input__control {
+        border-radius: 10px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <v-app>
+        <v-toolbar color="primary" dark app fixed>
+          <v-toolbar-title>CPHUX</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-text-field
+            flat
+            solo-inverted
+            hide-details
+            prepend-inner-icon="search"
+            label="Search"
+          ></v-text-field>
+          <v-spacer class="hidden-sm-and-down"></v-spacer>
+          <v-toolbar-items class="hidden-sm-and-down">
+            <v-btn flat>Info</v-btn>
+          </v-toolbar-items>
+        </v-toolbar>
+        <v-content style="background-color: #999">
+          <v-container fluid fill-height>
+            <v-layout justify-center align-center>
+              <v-flex xs12 sm6>
+                <v-card>
+                  <v-layout v-if="photoCount > 0" wrap>
+                    <v-flex xs6 offset-xs3 sm5 offset-sm0>
+                      <v-img src="disease.jpg" aspect-ratio="0.75"></v-img>
+                    </v-flex>
+                    <v-flex xs12 sm7>
+                      <v-layout
+                        align-space-between
+                        justify-space-between
+                        column
+                        fill-height
+                      >
+                        <v-card-title primary-title>
+                          <div>
+                            <h3 class="display-1 mb-2">
+                              Psoriasis Vulgaris
+                            </h3>
+                            <div class="body-1">
+                              Psoriasis er en kronisk, recidiverende,
+                              inflammatorisk hudsygdom med velafgrænsede,
+                              erytematøse skællende elementer på
+                              ekstensorsiderne af ekstremiteterne på kroppen og
+                              i hårbunden
+                            </div>
+                          </div>
+                        </v-card-title>
+                        <v-card-text>
+                          <v-btn
+                            color="primary"
+                            style="min-width: 0; margin: 0"
+                            href="disease.jpg"
+                            download="psoriasis-cphux.jpg"
+                            depressed
+                          >
+                            <v-icon dark>save_alt</v-icon>
+                          </v-btn>
+                        </v-card-text>
+                      </v-layout>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout v-else>
+                    <v-card-title primary-title>
+                      <div>
+                        <h3 class="headline mb-0">Please take a picture...</h3>
+                      </div>
+                    </v-card-title>
+                  </v-layout>
+                </v-card>
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </v-content>
+      </v-app>
+    </div>
+
+    <!-- Vue, Firebare, Firestore, VueFire -->
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vuetify"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-firestore.js"></script>
+    <script src="https://unpkg.com/vue-firestore@0.3.21/dist/vue-firestore.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!--
+serve
+surge . cphux.surge.sh
+ -->
