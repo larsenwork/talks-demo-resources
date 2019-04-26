@@ -2,11 +2,14 @@
   "name": "presentations",
   "version": "1.0.0",
   "scripts": {
-    "start": "mdx-deck deck.mdx"
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx",
+    "export": "mdx-deck-export pdf deck.mdx"
   },
   "author": "larsenwork",
   "license": "MIT",
   "devDependencies": {
+    "@mdx-deck/export": "^2.3.2",
     "mdx-deck": "^2.3.2"
   }
 }

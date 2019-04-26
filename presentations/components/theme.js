@@ -40,7 +40,8 @@ const customTheme = {
     listStyle: 'none',
   },
   li: {
-    display: 'flex',
+    display: 'block',
+    maxWidth: '80vw',
   },
   a: {
     textDecoration: 'none',

@@ -94,8 +94,22 @@
                   </v-layout>
                   <v-layout v-else>
                     <v-card-title primary-title>
-                      <div>
+                      <div v-if="!showForm">
                         <h3 class="headline mb-0">Please take a picture...</h3>
+                      </div>
+                      <div v-else>
+                        <v-card-text>
+                          <v-btn
+                            color="primary"
+                            style="min-width: 0; margin: 0"
+                            href="https://forms.gle/1ZLdWsJDxrR8k59Y6"
+                            target="_blank"
+                            depressed
+                          >
+                            <v-icon dark>thumb_up</v-icon>&nbsp;&nbsp;Event
+                            survey
+                          </v-btn>
+                        </v-card-text>
                       </div>
                     </v-card-title>
                   </v-layout>

@@ -1,6 +1,4 @@
-import { Split, FullScreenCode } from '@mdx-deck/layouts'
 import { Appear, Image, Notes } from '@mdx-deck/components'
-import { LiveCode } from 'mdx-deck-live-code'
 import BlurryImage from './components/blurryImage'
 export { default as themes } from './components/theme'
 
@@ -22,6 +20,10 @@ export { default as themes } from './components/theme'
 
 ## [larsenwork.com](https://larsenwork.com)
 
+<img src="./images/hello.gif" style={{ marginTop: 40 }} />
+
+<Notes>My name is.</Notes>
+
 ---
 
 <BlurryImage src="./images/students.gif" />
@@ -35,6 +37,11 @@ export { default as themes } from './components/theme'
 
 <BlurryImage src="./images/rhino.gif" />
 
+<Notes>
+  I know this talk could fill you with this feeling which I think we all with
+  tech. With the underlying question being...
+</Notes>
+
 ---
 
 # Do I, UXer, need to code?
@@ -47,6 +54,8 @@ export { default as themes } from './components/theme'
 
 </Appear>
 
+<Notes>I know this is beating a dead horse and no...</Notes>
+
 ---
 
 # Coding, when?
@@ -57,9 +66,14 @@ export { default as themes } from './components/theme'
 
 ## At least if you have the freedom to explore
 
-## To innovate
+## Freedom to innovate
 
 </Appear>
+
+<Notes>
+  Early (it's not only the final product)...Freedom: if you sit in an agency
+  this might not be the case.
+</Notes>
 
 ---
 
@@ -71,13 +85,15 @@ export { default as themes } from './components/theme'
 
 ### Limiting
 
-### Decoupled from your data and solution
+### Decoupled from your data + tech. stack
 
 </Appear>
 
 <Notes>
-  You might have an API or Machine learning model that is already quite capable
-  You might already have a rich component library
+  Design artefacts (Sketch, Figma creations etc.)... Limiting (Live camera) Data
+  (You might have an API or Machine learning model that is already quite
+  capable). Tech (You might already have a rich plug and play component library
+  in code).
 </Notes>
 
 ---
@@ -86,21 +102,35 @@ export { default as themes } from './components/theme'
 
 ## It's often quicker
 
+<Appear>
+
+## It's more realistic
+
+</Appear>
+<Notes>
+  If you work with data, sensors etc.
+</Notes>
+
 ---
 
 # Case
 
 ## Cross device picture taking flow
 
+<Notes>
+  We are working with a clinic where we want them to take pictures on the phone
+  and get the results on their main device (desktop). They actually already have
+  a camera but never use it because it adds no value and process is too manual.
+</Notes>
+
 ---
 
 <img src="./images/ux-blueprint-1.png" />
 
 <Notes>
-  There are picture taking solutions for clinics but they are a very manual
-  process and therefore rarely used. The initial solution we came up with after
-  inital talks with a clinic about a pilot was this. We wanted to test this and
-  couldn't do it in e.g. Figma.
+  The solution we came up with after inital talks with the clinic was this UX
+  blueprint. Obviously we wanted to test this and couldn't do it in e.g. Figma
+  so we turned to code.
 </Notes>
 
 ---
@@ -115,33 +145,71 @@ export { default as themes } from './components/theme'
 
 </Appear>
 
-<Notes>
-  No authentication, no transfer/storing of image, so what we're left with is
-</Notes>
+<Notes>...No authentication, no transfer/storing of image, so</Notes>
 
 ---
 
 <img src="./images/ux-blueprint-1.png" />
+
+<Notes>We went from this to only testing...</Notes>
 
 ---
 
 <img src="./images/ux-blueprint-test.png" />
 
 <Notes>
-  This is slightly simplified version of what we did. It wat critical for us to
-  test: how a HCP takes pictures, how it works to switch between devices, how it
-  integrates with their journaling system.
+  This. It was critical for us to test: how a HCP takes pictures, how it works
+  to switch between devices, how it integrates with their journaling system.
 </Notes>
 
 ---
 
 <BlurryImage src="./images/cat.gif" />
 
+<Notes>Demo time, cphux.surge.sh</Notes>
+
+---
+
+<BlurryImage src="./images/thumbs.gif" />
+
+<Notes>Hopefully it looked easy (you should never do live demos)</Notes>
+
+---
+
+<img src="./images/ux-blueprint-1.png" />
+
+<Notes>So based on our tests we went from this</Notes>
+
+---
+
+<img src="./images/ux-blueprint-2.png" />
+
+<Notes>
+  To this. Because a full stack developer was part of the testing he asked a why
+  not use CPR number. We hadn't because we thought GDPR and also didn't knew our
+  database supported it.
+</Notes>
+
+---
+
+# Remote testing
+
+Dermatologists in 🇷🇴 - <a href="https://backbone-final.surge.sh" target="_blank">Surge website</a>
+
+Testing UI itterations
+
+<Notes>
+  Some of our team members are dermatologists in Romania that have an interface
+  we use for machine learning model training. They aren't that tech savy so
+  sharing a link on Slack they can open which just works like the normal website
+  for testing UI itterations is way easier.
+</Notes>
+
 ---
 
 # Codesign
 
-<a href="https://codepen.io/larsenwork/pen/wJoMqm?editors=0110" target="_blank">Momondo colors CodePen</a>
+Momondo colors <a href="https://codepen.io/larsenwork/pen/wJoMqm?editors=0110" target="_blank">CodePen</a>
 
 ---
 
@@ -163,9 +231,9 @@ export { default as themes } from './components/theme'
 
 ## Services
 
+- [Surge](https://surge.sh/)&nbsp;Instant publish static websites
 - [CodePen](https://codepen.io/)&nbsp;Quick code mockups
 - [CodeSandbox](https://codesandbox.io/)&nbsp;Online web apps
-- [Surge](https://surge.sh/)&nbsp;Instant publish static websites
 
 ---
 
@@ -186,3 +254,7 @@ export { default as themes } from './components/theme'
 - [This presentation (code)](https://github.com/larsenwork/talks-demo-resources/blob/master/presentations/deck.mdx)
 - [Code examples in this demo](https://github.com/larsenwork/talks-demo-resources/tree/master/2019-04-25%20CHPUX)
 - [GDPR Sensitive data](https://ec.europa.eu/info/law/law-topic/data-protection/reform/rules-business-and-organisations/legal-grounds-processing-data/sensitive-data/what-personal-data-considered-sensitive_en)
+
+---
+
+# 🙏 cphux.surge.sh

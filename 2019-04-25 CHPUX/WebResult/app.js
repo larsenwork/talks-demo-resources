@@ -9,6 +9,7 @@ const app = new Vue({
   el: '#app',
   data: {
     photoCount: 0,
+    showForm: false,
   },
   firestore: {
     cphuxState: firebase
@@ -19,6 +20,7 @@ const app = new Vue({
   mounted() {
     this.$firestore.cphuxState.onSnapshot(document => {
       this.photoCount = document.data().photoCount
+      this.showForm = document.data().showForm
     })
   },
 })

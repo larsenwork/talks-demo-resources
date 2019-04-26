@@ -1,7 +1,7 @@
 import React from 'react'
 
 const css = `
-li::before, h3::before, h2::before {
+li::before, h3::before, h2::before, p::before {
   content: "×";
   color: hotpink;
   width: 0px;
@@ -11,6 +11,9 @@ li::before, h3::before, h2::before {
 }
 h2::before {
   transform: translateX(-.45em) scale(.4);
+}
+p {
+  margin: 0.5em 0;
 }
 li:not(:last-child) {
   margin-bottom: 0.5em;
